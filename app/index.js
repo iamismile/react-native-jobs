@@ -3,8 +3,10 @@ import { SafeAreaView, ScrollView, View } from 'react-native';
 
 import { NearbyJobs, PopularJobs, ScreenHeaderBtn, Welcome } from '../components';
 import { COLORS, icons, images, SIZES } from '../constants';
+import { useState } from 'react';
 
 const Home = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
 
   return (
@@ -21,7 +23,15 @@ const Home = () => {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{ flex: 1, padding: SIZES.medium }}>
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`);
+              }
+            }}
+          />
           <PopularJobs />
           <NearbyJobs />
         </View>

@@ -8,4 +8,23 @@ import NearbyJobs from './home/nearby/NearbyJobs';
 import PopularJobs from './home/popular/PopularJobs';
 import Welcome from './home/welcome/Welcome';
 
-export { NearbyJobCard, NearbyJobs, PopularJobCard, PopularJobs, ScreenHeaderBtn, Welcome };
+// job details screen
+import Company from './job-details/company/Company';
+import JobTabs from './job-details/tabs/Tabs';
+import JobAbout from './job-details/about/About';
+import JobFooter from './job-details/footer/Footer';
+import Specifics from './job-details/specifics/Specifics';
+
+export {
+  NearbyJobCard,
+  NearbyJobs,
+  PopularJobCard,
+  PopularJobs,
+  ScreenHeaderBtn,
+  Welcome,
+  Company,
+  JobAbout,
+  JobFooter,
+  JobTabs,
+  Specifics,
+};
